@@ -17,21 +17,19 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit() {
+
+  }
+
+  submit() {
     this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '';
-
-    if (true) {
-
-      this._authService.login.subscribe(data => {
-
-          // console.log(11, temp);
-          if (data.res === true) {
-            this._router.navigate(['/view']);
-          } else {
-            this._router.navigate(['/login']);
-          }
-        },
-        error => {
-        });
-    }
+    this._authService.login.subscribe(data => {
+        if (data.res === true) {
+          this._router.navigate(['/view']);
+        } else {
+          this._router.navigate(['/login']);
+        }
+      },
+      error => {
+      });
   }
 }
