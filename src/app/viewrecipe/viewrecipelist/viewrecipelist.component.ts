@@ -18,7 +18,7 @@ export class ViewrecipelistComponent implements OnInit {
     const data = this.data.recipedata();
     console.log('home', data.recipes);
     this.finaldata = data.recipes;
-    localStorage.setItem('prefixed-data', JSON.stringify( this.finaldata));
+    localStorage.setItem('data', JSON.stringify( this.finaldata));
   }
   view(data, index) {
     this.route.navigate(['/view/', index]);
@@ -28,6 +28,5 @@ export class ViewrecipelistComponent implements OnInit {
   }
   delete(data, index) {
     alert(index);
-    //this.route.navigate(['/add/', index]);
   }
 }

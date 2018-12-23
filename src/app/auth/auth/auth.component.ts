@@ -21,8 +21,8 @@ export class AuthComponent implements OnInit {
   }
 
   submit() {
-    this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '';
-    this._authService.login.subscribe(data => {
+   // this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '';
+  /*  this._authService.login.subscribe(data => {
         if (data.res === true) {
           this._router.navigate(['/view']);
         } else {
@@ -30,6 +30,6 @@ export class AuthComponent implements OnInit {
         }
       },
       error => {
-      });
+      });*/
   }
 }

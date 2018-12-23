@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'view',
+    redirectTo: 'login',
     pathMatch: 'full'
   }
 ];
